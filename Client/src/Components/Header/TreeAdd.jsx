@@ -57,6 +57,7 @@ export default class TreeAdd extends React.Component {
               )}
               placeholder="e.g. React"
               onChange={e => this.setState({ search: e.target.value })}
+			  className="TreeAdd"
             />
             <NormalButton
               text="Add Node"

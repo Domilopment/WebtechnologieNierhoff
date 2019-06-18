@@ -129,7 +129,7 @@ module.exports = app => {
     app.get("/api/post/newest", (req, res) => {
         PostDB.selectData({}).then(posts => {
             posts.sort((a, b) => {
-                return new Date(a.post_date) - new Date(b.post_date)
+                return new Date(b.post_date) - new Date(a.post_date)
             })
             let newestPosts = posts.slice(0, Config.FEED_LENGTH)
             let pro = []
